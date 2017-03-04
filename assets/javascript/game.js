@@ -14,7 +14,7 @@ var computerGuesses = alphabetArr[Math.floor(Math.random() * alphabetArr.length)
 
 //function that allows 9 total guesses
 
-var newGuessesLeft = function(){ //insert HTML from class .guessLeft HTLM replaces then add the variable guessesLeft
+var newGuessesLeft = function(){ // use document.querySelector to replace element from HTML from class .guessLeft HTLM replaces then add the variable guessesLeft
 	document.querySelector(".guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;		
 };
 	console.log(newGuessesLeft);
@@ -24,11 +24,11 @@ var newGuessesSoFar = function(){ //insert HTML from class .soFar HTML replaces 
 };
 	console.log(newGuessesSoFar);
 
-var newLetterToGuess = function(){
+var newLetterToGuess = function(){ //use this. to match users new guess to a random computer generated alphabet array
 	this.letterToGuess = this.alphabetArr[Math.floor(Math.random()* this.alphabetArr.length)];
 };
   console.log(newLetterToGuess);
-
+  console.log("is it a match?")
 
 //function to reset everything
 var reset = function() {
@@ -41,16 +41,12 @@ var reset = function() {
   newLetterToGuess();
 }
 
-	newLetterToGuess();
-	newGuessesLeft();
-
-
-//key starts the game
+//onkey starts the game
 document.onkeyup = function(event) { //function that goes all the way to the end of the document
     guessesLeft--;
   var userGuess = String.fromCharCode(event.keyCode).toLowerCase(); // lowercase/uppercase function
 
-  guessedLetterArr.push(userGuess);
+  guessedLetterArr.push(userGuess);  //The push() method adds new items to the end of an array, and returns the new length.
   newGuessesLeft();
   newGuessesSoFar();
 
@@ -59,7 +55,7 @@ document.onkeyup = function(event) { //function that goes all the way to the end
                 wins++;
 
                 document.querySelector(".wins").innerHTML = "Wins: " + wins;
-                console.log("This is working!");
+                console.log("Nice win!");
                 //call the reset
                 reset();
             }
