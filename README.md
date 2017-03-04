@@ -1,2 +1,2 @@
-# Hangman-Game
-Hangman-Game Homework 3
+# Psychic Game
+Psychic-Game Homework 3
