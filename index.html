@@ -1,28 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+
+<head>
     <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
     <title>Psychic-Game</title>
-  </head>
-  <body>
-  <h1>The Psychic Game</h1>
+</head>
+
+<body>
+  <header>
+    <h1>The Psychic Game</h1>
+  </header>
+  <br><br><br>
 
     <!-- When we start playing the game, our HTML will be placed into this div. -->
-    <div id="game">
-      <p>Guess what letter I'm thinking of</p>
+    <div class="container">
+        <div id="game">
+            <h2>Guess what letter I'm thinking of</h2>
+        </div>
+    <br><br><br>
+    <div class="innerContainer">
+        <div class="wins">
+            <p>Wins: </p>
+        </div>
+        <br>
+        <div class="losses">
+            <p>Losses: </p>
+        </div>
+        <br>
+        <div class="guessesLeft">
+            <p>Guesses Left: </p>
+        </div>
+        <br>
+        <div class="soFar">
+            <p>Your Guesses so far: </p>
+        </div>
     </div>
-    <div class="wins"><p>Wins: </p></div>
-    <div class="losses"><p>Losses: </p></div>
-    <div class="guessesLeft"><p>Guesses Left: </p></div>
-    <div class="soFar"><p>Your Guesses so far: </p></div>
+    </div>
+    
+    
+    <script src="assets/javascript/game.js"></script>
+</body>
 
-
-
-
-
-
-<script src="assets/javascript/game.js"></script>
-
-  </body>
 </html>
