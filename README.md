@@ -1,2 +1,2 @@
-# Psychic-Game
-Homework 3 Easier
+# Hangman-Game
+Hangman-Game Homework 3
